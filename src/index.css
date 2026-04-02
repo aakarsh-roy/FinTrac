@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --bg: #0b0f1a;
+  --panel: #121828;
+  --surface: rgba(255, 255, 255, 0.05);
+  --text-strong: #f7f2ff;
+  --text: #b6b4d4;
+  --text-muted: #8383a6;
+  --accent: #b045ff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(10, 12, 24, 0.45);
+  --input-border: rgba(255, 255, 255, 0.12);
+  --table-head-bg: rgba(18, 22, 42, 0.85);
+  --row-bg: rgba(255, 255, 255, 0.02);
+  --row-bg-hover: rgba(255, 255, 255, 0.06);
+  --chip-bg: rgba(255, 255, 255, 0.07);
+  --chip-bg-hover: rgba(255, 255, 255, 0.12);
+  --positive: #6ee7b7;
+  --negative: #fda4af;
+  --positive-soft: rgba(16, 185, 129, 0.16);
+  --negative-soft: rgba(244, 63, 94, 0.18);
+  --ring-center-bg: rgba(15, 19, 34, 0.8);
+}
+
+html[data-theme='light'] {
+  --bg: #eef2fb;
+  --panel: #ffffff;
+  --surface: rgba(255, 255, 255, 0.82);
+  --text-strong: #10202b;
+  --text: #385566;
+  --text-muted: #6f8795;
+  --accent: #8b3dff;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(100, 116, 139, 0.2);
+  --input-bg: rgba(248, 250, 255, 0.96);
+  --input-border: rgba(100, 116, 139, 0.25);
+  --table-head-bg: rgba(241, 245, 255, 0.92);
+  --row-bg: rgba(255, 255, 255, 0.78);
+  --row-bg-hover: rgba(245, 247, 255, 0.96);
+  --chip-bg: rgba(139, 61, 255, 0.08);
+  --chip-bg-hover: rgba(139, 61, 255, 0.14);
+  --positive: #059669;
+  --negative: #dc2626;
+  --positive-soft: rgba(5, 150, 105, 0.12);
+  --negative-soft: rgba(220, 38, 38, 0.12);
+  --ring-center-bg: rgba(255, 255, 255, 0.95);
+}
+
+@theme {
+  --font-sans: 'Manrope', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(176, 69, 255, 0.32), transparent 28%),
+    radial-gradient(circle at 90% 6%, rgba(251, 113, 181, 0.24), transparent 24%),
+    radial-gradient(circle at 70% 75%, rgba(99, 102, 241, 0.18), transparent 28%),
+    var(--bg);
+  background-attachment: fixed;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme='light'] body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(168, 85, 247, 0.16), transparent 26%),
+    radial-gradient(circle at 92% 8%, rgba(236, 72, 153, 0.12), transparent 22%),
+    radial-gradient(circle at 70% 78%, rgba(99, 102, 241, 0.1), transparent 26%),
+    var(--bg);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+html[data-theme='dark'] select {
+  color-scheme: dark;
+}
+
+html[data-theme='light'] select {
+  color-scheme: light;
+}
+
+select option,
+select optgroup {
+  background-color: var(--surface);
+  color: var(--text-strong);
+}
