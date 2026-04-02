@@ -1,6 +1,6 @@
-# Money Pulse
+# FinTrac
 
-Money Pulse is a frontend-only fintech dashboard with a premium SaaS-style UI.
+FinTrac is a frontend-only fintech dashboard with a premium SaaS-style UI.
 
 It uses mocked data, simulated API loading, and client-side state management to deliver a complete product-like experience without backend dependencies.
 
